@@ -19,3 +19,52 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
+brew:
+  name: test-cli
+
+  # Reporitory to push the tap to.
+  github:
+    owner: jorgeacetozi
+    name: homebrew-test-cli
+
+  # Git author used to commit to the repository.
+  # Defaults are shown.
+  commit_author:
+    name: goreleaserbot
+    email: goreleaser@jorgeacetozi.com
+
+  # Folder inside the repository to put the formula.
+  # Default is the root folder.
+  folder: Formula
+
+  # Caveats for the user of your binary.
+  # Default is empty.
+  caveats: "How to use this binary"
+
+  # Your app's homepage.
+  # Default is empty.
+  homepage: "https://jorgeacetozi.com/"
+
+  # Your app's description.
+  # Default is empty.
+  description: "Simple test CLI in Go."
+
+  # Setting this will prevent goreleaser to actually try to commit the updated
+  # formula - instead, the formula file will be stored on the dist folder only,
+  # leaving the responsibility of publishing it to the user.
+  # Default is false.
+  skip_upload: true
+
+  # Packages your package depends on.
+  dependencies:
+    - go
+
+  # So you can `brew test` your formula.
+  # Default is empty.
+  test: |
+    system "#{bin}/program version"
+
+  # Custom install script for brew.
+  # Default is 'bin.install "program"'.
+  install: |
+    bin.install "program"
