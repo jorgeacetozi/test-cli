@@ -32,9 +32,6 @@ changelog:
     - Merge branch
 brew:
   name: test-cli
-  github:
-    owner: outlyerapp
-    name: homebrew-tap
   folder: Formula
   homepage: "https://jorgeacetozi.com/"
   description: "Simple test CLI in Go."
