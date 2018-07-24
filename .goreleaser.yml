@@ -7,7 +7,8 @@ builds:
     - darwin
     - linux
     - windows
-  main: ./cmd/main.go
+  main: ./cmd/test-cli/main.go
+  binary: test-cli
 archive:
   replacements:
     darwin: Darwin
