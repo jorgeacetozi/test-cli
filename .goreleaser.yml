@@ -3,6 +3,11 @@
 builds:
 - env:
   - CGO_ENABLED=0
+  goos:
+    - darwin
+    - linux
+    - windows
+  main: ./cmd/main.go
 archive:
   replacements:
     darwin: Darwin
