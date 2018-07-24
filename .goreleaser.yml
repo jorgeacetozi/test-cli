@@ -15,6 +15,9 @@ archive:
     windows: Windows
     linux: Linux
     amd64: x86_64
+  format_overrides:
+  - goos: windows
+    format: zip
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -25,6 +28,8 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
+    - Merge pull request
+    - Merge branch
 brew:
   name: test-cli
 
@@ -33,19 +38,9 @@ brew:
     owner: jorgeacetozi
     name: homebrew-test-cli
 
-  # Git author used to commit to the repository.
-  # Defaults are shown.
-  commit_author:
-    name: goreleaserbot
-    email: goreleaser@jorgeacetozi.com
-
   # Folder inside the repository to put the formula.
   # Default is the root folder.
   folder: Formula
-
-  # Caveats for the user of your binary.
-  # Default is empty.
-  caveats: "How to use this binary"
 
   # Your app's homepage.
   # Default is empty.
@@ -61,16 +56,7 @@ brew:
   # Default is false.
   skip_upload: true
 
-  # Packages your package depends on.
-  dependencies:
-    - go
-
   # So you can `brew test` your formula.
   # Default is empty.
   test: |
     system "#{bin}/program version"
-
-  # Custom install script for brew.
-  # Default is 'bin.install "program"'.
-  install: |
-    bin.install "program"
