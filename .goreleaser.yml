@@ -6,7 +6,6 @@ builds:
     - linux
     - windows
   main: ./cmd/test-cli/main.go
-  binary: test-cli
 archive:
   replacements:
     darwin: Darwin
