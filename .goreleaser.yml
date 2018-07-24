@@ -32,31 +32,7 @@ changelog:
     - Merge branch
 brew:
   name: test-cli
-
-  # Reporitory to push the tap to.
-  github:
-    owner: jorgeacetozi
-    name: homebrew-test-cli
-
-  # Folder inside the repository to put the formula.
-  # Default is the root folder.
   folder: Formula
-
-  # Your app's homepage.
-  # Default is empty.
   homepage: "https://jorgeacetozi.com/"
-
-  # Your app's description.
-  # Default is empty.
   description: "Simple test CLI in Go."
-
-  # Setting this will prevent goreleaser to actually try to commit the updated
-  # formula - instead, the formula file will be stored on the dist folder only,
-  # leaving the responsibility of publishing it to the user.
-  # Default is false.
   skip_upload: true
-
-  # So you can `brew test` your formula.
-  # Default is empty.
-  test: |
-    system "#{bin}/program version"
