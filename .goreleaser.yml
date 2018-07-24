@@ -31,9 +31,8 @@ changelog:
 brew:
   name: test-cli
   github:
-    owner: outlyerapp
+    owner: jorgeacetozi
     name: homebrew-tap
   folder: Formula
   homepage: "https://jorgeacetozi.com/"
   description: "Simple test CLI in Go."
-  skip_upload: true
